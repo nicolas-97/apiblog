@@ -8,7 +8,8 @@ use Illuminate\Http\Request;
 
 class ProfileController extends Controller
 {
-    public function show(Request $request){
-        return User::find($request);
+    public function show(Request $request)
+    {
+        return response()->json($request->user());
     }
 }
